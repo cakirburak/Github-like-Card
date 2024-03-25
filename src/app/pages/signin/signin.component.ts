@@ -41,4 +41,8 @@ export class SignInComponent {
         },
       });
   }
+
+  signInWithGoogle() {
+    this.authService.signInWithGoogle();
+  }
 }
