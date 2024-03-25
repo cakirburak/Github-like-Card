@@ -14,16 +14,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have the 'Github-like-Card' title`, () => {
+  it(`should have the 'github-like-card' title`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('Github-like-Card');
+    expect(app.title).toEqual('github-like-card');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, Github-like-Card');
+    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, github-like-card');
   });
 });

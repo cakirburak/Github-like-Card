@@ -1,5 +1,4 @@
 export const environment = {
-  production: false,
   firebaseConfig: {
     apiKey: "AIzaSyB02RP1x-UXcsQRSm8F1dSlh0uU5TTjcG8",
     authDomain: "github-like-card.firebaseapp.com",
