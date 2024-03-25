@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "github-like-card": {
+      "hosting": {
+        "github-like-card": [
+          "github-like-card"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "github-like-card"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "hosting": [
+    {
+      "target": "github-like-card",
+      "source": ".",
+      "frameworksBackend": {}
+    }
+  ]
+}

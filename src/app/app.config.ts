@@ -14,6 +14,6 @@ export const appConfig: ApplicationConfig = {
     importProvidersFrom([
       provideFirebaseApp(() => initializeApp(environment.firebaseConfig)),
       provideAuth(() => getAuth())
-    ]),
+    ]), importProvidersFrom(provideFirebaseApp(() => initializeApp({"projectId":"github-like-card","appId":"1:644182258645:web:46c449d41fb8bbd7dfc35c","storageBucket":"github-like-card.appspot.com","apiKey":"AIzaSyB02RP1x-UXcsQRSm8F1dSlh0uU5TTjcG8","authDomain":"github-like-card.firebaseapp.com","messagingSenderId":"644182258645"}))), importProvidersFrom(provideAuth(() => getAuth())),
   ]
 };

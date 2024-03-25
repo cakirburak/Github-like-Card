@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Github-like-Card": {
+    "github-like-card": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -100,6 +100,23 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "version": 2
+          },
+          "configurations": {
+            "production": {
+              "buildTarget": "github-like-card:build:production",
+              "serveTarget": "github-like-card:serve:production"
+            },
+            "development": {
+              "buildTarget": "github-like-card:build:development",
+              "serveTarget": "github-like-card:serve:development"
+            }
+          },
+          "defaultConfiguration": "production"
         }
       }
     }
