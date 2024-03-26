@@ -13,7 +13,7 @@ export const appConfig: ApplicationConfig = {
     provideHttpClient(),
     importProvidersFrom([
       provideFirebaseApp(() => initializeApp(environment.firebaseConfig)),
-      provideAuth(() => getAuth())
+      provideAuth(() => getAuth()),
     ])
   ]
 };

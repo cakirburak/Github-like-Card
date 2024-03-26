@@ -1,6 +1,5 @@
-import { Component, inject } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
@@ -9,10 +8,5 @@ import { HttpClient } from '@angular/common/http';
   templateUrl: './app.component.html',
 })
 export class AppComponent {
-  title = 'github-like-card';
-  http = inject(HttpClient);
 
-  logout(): void {
-    console.log('logout');
-  }
 }
