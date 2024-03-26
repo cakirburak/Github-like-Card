@@ -37,4 +37,10 @@ export class AuthService {
       this.router.navigateByUrl('/');
     })
   }
+
+  validateUsername(username: string): boolean {
+    // Check if username is empty or contains whitespace or special characters
+    const regex = /^[a-zA-Z0-9]+$/; // Allow only alphanumeric characters
+    return !!username && !/\s/.test(username) && regex.test(username);
+  }
 }
