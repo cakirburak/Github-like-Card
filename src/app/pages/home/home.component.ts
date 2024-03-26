@@ -1,31 +1,32 @@
-import { Component, OnInit, inject } from '@angular/core';
+import { Component, ViewChild, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Router } from '@angular/router';
-import { Auth, User, getAuth } from '@angular/fire/auth';
 import { RouterLink, RouterOutlet } from '@angular/router';
+import { NavComponent } from '../../components/nav/nav.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, RouterLink],
+  imports: [CommonModule, RouterOutlet, RouterLink, NavComponent],
   templateUrl: './home.component.html',
 })
-export class HomeComponent implements OnInit {
-  private auth: Auth = inject(Auth);
+export class HomeComponent {
 
-  currentUser!: User | null;
-  router = inject(Router);
+  // LOGIC
+  @ViewChild(NavComponent) navComponent: NavComponent | undefined;
 
-  ngOnInit(): void {
-    this.currentUser = getAuth().currentUser;
-  };
-
-  logout() {
-    this.auth.signOut().then(() => {
-      console.log("User logged out successfully");
-      this.router.navigateByUrl('/signin');
-    }).catch((err) => {
-      console.error("Error logging out:", err);
-    });
+  @HostListener('document:click', ['$event'])
+  onClickOutsideDropDown(event: Event) {
+    if (!this.navComponent?.showDropDown) {
+      return;
+    }
+    const target = event.target as HTMLElement;
+    if (!target.closest('.dropdown')) {
+      this.navComponent.showDropDown = false;
+    }
   }
+
+  // STYLES
+
+  NavContainer: string = "mx-auto max-w-7xl px-2 sm:px-6 lg:px-8";
+  NavInnerContainer: string = "flex h-16 items-center justify-between";
 }

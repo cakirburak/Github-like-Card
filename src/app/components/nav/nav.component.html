@@ -1,0 +1,31 @@
+<nav class="bg-[#0e1117] shadow-sm shadow-black">
+  <div class={{NavContainer}}>
+    <div class={{NavInnerContainer}}>
+
+      <div class="flex-1 justify-start ps-2">
+        <!-- 
+          flex-1 expands the element to flex-direction as possible
+          and with justify-start elements inside it aligns to the left
+         -->
+        <div class="text-3xl font-semibold text-[#ba0048]">GLC</div>
+      </div>
+
+      <div class="relative dropdown pe-2">
+        <button (click)="handleDropDown()" type="button" class="flex rounded-full bg-gray-800 text-sm">
+          <!-- handle drop down click event and set the current users profile image -->
+          <img class="h-8 w-8 rounded-full" src={{currentUserProfileUrl}} alt="">
+        </button>
+
+        <!-- Dropdown Menu-->
+        <div *ngIf="showDropDown" class="absolute right-2 mt-2 w-32 rounded-md bg-white py-1">
+          <!-- with the position attribute set to absolute it behaves under outer relative element -->
+          <button (click)="signOut()" class="px-4 py-2 w-full text-sm text-start text-gray-700">
+            <!-- sign out user when click -->
+            Sign out
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</nav>
