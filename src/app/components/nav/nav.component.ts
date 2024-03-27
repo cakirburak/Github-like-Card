@@ -15,8 +15,8 @@ export class NavComponent implements OnInit {
   // LOGIC
 
   private auth: Auth = inject(Auth);
-  currentUser!: User | null;
   router = inject(Router);
+  currentUser!: User | null;
   currentUserProfileUrl!: string | null;
 
   // on component initialization get the current authenticated user and set its profilePhotoUrl
@@ -25,11 +25,14 @@ export class NavComponent implements OnInit {
 
     if (this.currentUser?.photoURL) {
       this.currentUserProfileUrl = this.currentUser?.photoURL;
+      // this occurs when user signs in with Google
     } else {
       this.currentUserProfileUrl = "https://img.icons8.com/carbon-copy/100/FFFFFF/gender-neutral-user.png";
     }
   };
 
+  // sign out handler: signs out the current authenticated user
+  // redirects to signin page. if it fails, logs the error
   signOut() {
     this.auth.signOut().then(() => {
       console.log("User logged out successfully");
@@ -39,6 +42,7 @@ export class NavComponent implements OnInit {
     });
   }
 
+  // drop down menu handler onClick
   showDropDown: boolean = false;
   handleDropDown() {
     this.showDropDown = !this.showDropDown;
@@ -47,12 +51,12 @@ export class NavComponent implements OnInit {
   // STYLES
 
   NavContainer: string = "mx-auto max-w-7xl px-2 sm:px-6 lg:px-8";
-  // center the navbar with mx-auto
-  // set its max-w to 7xl so it does not expand too much on desktop view
-  // set breakpoints for small and large devices to padding-x value
+                      // center the navbar with mx-auto
+                      // set its max-w to 7xl so it does not expand too much on desktop view
+                      // set breakpoints for small and large devices to padding-x value
 
   NavInnerContainer: string = "flex h-16 items-center justify-between";
-  // use flex for aligning navbar to center both  horizontal(items-center) and vertical(justify-between)
-  // set its height to 16
+                            // use flex for aligning navbar to center both  horizontal(items-center) and vertical(justify-between)
+                            // set its height to 16
 
 }

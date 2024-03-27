@@ -11,6 +11,8 @@ import { HomeComponent } from './pages/home/home.component';
 const redirectUnauthorizedToSignIn = () => redirectUnauthorizedTo(['signin']);
 const redirectSignedInToHome = () => redirectLoggedInTo(['']);
 
+// Routes are protected with AuthGuard
+// which means unauthorized requests will redirected to /signin with corresponding component
 export const routes: Routes = [
   {
     path: 'signup',

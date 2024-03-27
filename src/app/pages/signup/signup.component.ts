@@ -1,4 +1,3 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { RouterLink, Router } from '@angular/router';
@@ -16,13 +15,17 @@ export class SignUpComponent {
   // LOGIC
 
   fb = inject(FormBuilder);
-  http = inject(HttpClient);
+  // inject FormBuilder to handle input values
   router = inject(Router);
+  // Router for redirection
   authService = inject(AuthService);
+  // AuthService for authentication functionalities
 
+  // these variables is used to manage the view acording to submit response
   errorMessage: string | null = null;
   isLoading: boolean = false;
 
+  // get form inputs with corresponding attributes
   form = this.fb.nonNullable.group({
     username: ['', Validators.required],
     email: ['', Validators.required],
@@ -31,7 +34,9 @@ export class SignUpComponent {
 
   onSubmit(): void {
     const rawForm = this.form.getRawValue();
+    // convert form to JSON object
     this.isLoading = true;
+    // set loading to true so that loading animation can be rendered
 
     // if username is invalid set the error and return
     if (!this.authService.validateUsername(rawForm.username)) {
@@ -41,13 +46,13 @@ export class SignUpComponent {
     }
 
     this.authService
-      .signUpWithEmailAndPassword(rawForm.email, rawForm.username, rawForm.password)
+      .signUpWithEmailAndPassword(rawForm.email, rawForm.username, rawForm.password) // s
       .subscribe({
-        next: () => {
-          this.isLoading = false;
+        next: () => { // if sign up successful redirect to home page and reset loading animation
           this.router.navigateByUrl('/');
+          this.isLoading = false;
         },
-        error: (err) => {
+        error: (err) => { // if sign up failed reset loading animation and set the error 
           this.isLoading = false;
           this.errorMessage = err.code;
         },
@@ -67,5 +72,6 @@ export class SignUpComponent {
   InputStyle: string = "w-full h-8 ps-2 rounded-lg  bg-slate-800 text-gray-200";
   LinkStyle: string = "text-sm mt-4 ps-2 inline-block hover:underline hover:text-[#ba0048] text-gray-100";
   ButtonStyle: string = "w-full h-8 rounded-lg bg-slate-600 hover:bg-[#ba0048] transition-colors duration-300 text-gray-300";
+  // with transition-colors and duration-300 sudden hover effects are prevented
 
 }
