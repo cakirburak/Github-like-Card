@@ -1,140 +1,31 @@
 <app-nav></app-nav>
-<div class="mx-auto max-w-7xl px-4 sm:px-8 lg:px-10 mt-4 sm:mt-8 lg:mt-10">
-  <div
-    class="flex flex-col md:flex-row items-center justify-center w-full 
-    bg-[#151B22] border border-1 border-gray-700 rounded-lg
-    bg-gradient-to-r from-[#471045] via-[#151B22] to-[#151B22]
-    md:bg-gradient-to-r md:from-[#151B22] md:via-[#151B22] md:to-[#471045]
-    
-    bg-[position:_100%_100%] hover:bg-[position:_25%_25%]
-    md:bg-[position:_0%_0%] md:hover:bg-[position:_65%_65%] bg-[size:_400%] transition-all duration-700 overflow-hidden">
+<div class={{HomeContainer}}>
+  <div class={{CardContainer}}>
 
-    <div class="flex flex-col 
-    w-full gap-12 p-4 sm:p-10
-    md:w-1/2 md:gap-40 lg:gap-48 lg:p-16 lg:pe-28 box-border">
-      <div class="text-base sm:text-xl md:text-lg lg:text-2xl text-gray-200 font-semibold">GitHub Sponsors
-        <span class="text-base sm:text-xl md:text-lg lg:text-2xl text-gray-400 font-medium">lets you support your
-          favorite open
-          source maintainers and
-          projects.</span>
+    <div class={{CardTextContainer}}>
+      <div class="{{CardTextSize + 'text-gray-200 font-semibold'}}">
+        GitHub Sponsors
+        <span class="{{CardTextSize + 'text-gray-400 font-medium'}}">
+          lets you support your favorite open source maintainers and projects.
+        </span>
       </div>
-      <div>
-        <a href="#"
-          class="text-gray-200 font-semibold flex items-center text-base sm:text-xl md:text-lg lg:text-2xl py-1 w-fit hover:underline underline-offset-8">
-          Invest with GitHub Sponsors
-          <img class="w-4 h-4 ms-2" src="https://img.icons8.com/ios-filled/50/e3e7ed/forward--v1.png" alt="forward" />
-        </a>
-      </div>
+      <a href="#" class={{CardLinkStyle}}>
+        Invest with GitHub Sponsors
+        <img class="w-4 h-4 ms-2" src={{CardLinkIconUrl}} alt="forward" />
+      </a>
     </div>
 
-    <div class="w-full md:w-1/2 min-h-96 md:min-h-fit overflow-hidden md:overflow-visible">
-      <div class="relative ">
-        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-2 lg:grid-cols-3 gap-4  max-w-sm sm:max-w-lg md:max-w-xs lg:max-w-xl
-      absolute
-      right-0 -translate-x-0 -translate-y-1/3 sm:-translate-y-1/4 sm:mx-auto
-      md:-translate-y-1/2 lg:-translate-y-1/2 md:-translate-x-[-20px]
-      rotate-[-15deg]">
-          <a href="#" class="flex flex-col items-center p-4 border border-1 border-gray-700 rounded-lg bg-[#161B22]">
-            <img src="https://storage.googleapis.com/pai-images/80997b3889c34d019a18ebab1bde3956.jpeg"
-              class="w-24 h-24 rounded-full" alt="">
-            <div class="my-2 text-gray-400">Lorem Ipsum</div>
-            <button class="flex gap-2 px-3 py-1 items-center
-            bg-[#21262C] hover:bg-[#30363C] border border-1 border-gray-700 hover:border-gray-400 rounded-lg
-            transition-colors duration-300">
-              <img src="https://img.icons8.com/windows/32/e3e7ed/like--v1.png" class="w-5 h-5" alt="">
-              <div class="text-gray-400 font-semibold">Sponsor</div>
-            </button>
-          </a>
-          <a href="#" class="flex flex-col items-center p-4 border border-1 border-gray-700 rounded-lg bg-[#161B22]">
-            <img src="https://storage.googleapis.com/pai-images/80997b3889c34d019a18ebab1bde3956.jpeg"
-              class="w-24 h-24 rounded-full" alt="">
-            <div class="my-2 text-gray-400">Lorem Ipsum</div>
-            <button class="flex gap-2 px-3 py-1 items-center
-                      bg-[#21262C] hover:bg-[#30363C] border border-1 border-gray-700 hover:border-gray-400 rounded-lg
-                      transition-colors duration-300">
-              <img src="https://img.icons8.com/windows/32/e3e7ed/like--v1.png" class="w-5 h-5" alt="">
-              <div class="text-gray-400 font-semibold">Sponsor</div>
-            </button>
-          </a>
-          <a href="#" class="flex flex-col items-center p-4 border border-1 border-gray-700 rounded-lg bg-[#161B22]">
-            <img src="https://storage.googleapis.com/pai-images/80997b3889c34d019a18ebab1bde3956.jpeg"
-              class="w-24 h-24 rounded-full" alt="">
-            <div class="my-2 text-gray-400">Lorem Ipsum</div>
-            <button class="flex gap-2 px-3 py-1 items-center
-                      bg-[#21262C] hover:bg-[#30363C] border border-1 border-gray-700 hover:border-gray-400 rounded-lg
-                      transition-colors duration-300">
-              <img src="https://img.icons8.com/windows/32/e3e7ed/like--v1.png" class="w-5 h-5" alt="">
-              <div class="text-gray-400 font-semibold">Sponsor</div>
-            </button>
-          </a>
-          <a href="#" class="flex flex-col items-center p-4 border border-1 border-gray-700 rounded-lg bg-[#161B22]">
-            <img src="https://storage.googleapis.com/pai-images/80997b3889c34d019a18ebab1bde3956.jpeg"
-              class="w-24 h-24 rounded-full" alt="">
-            <div class="my-2 text-gray-400">Lorem Ipsum</div>
-            <button class="flex gap-2 px-3 py-1 items-center
-                      bg-[#21262C] hover:bg-[#30363C] border border-1 border-gray-700 hover:border-gray-400 rounded-lg
-                      transition-colors duration-300">
-              <img src="https://img.icons8.com/windows/32/e3e7ed/like--v1.png" class="w-5 h-5" alt="">
-              <div class="text-gray-400 font-semibold">Sponsor</div>
-            </button>
-          </a>
-          <a href="#" class="flex flex-col items-center p-4 border border-1 border-gray-700 rounded-lg bg-[#161B22]">
-            <img src="https://storage.googleapis.com/pai-images/80997b3889c34d019a18ebab1bde3956.jpeg"
-              class="w-24 h-24 rounded-full" alt="">
-            <div class="my-2 text-gray-400">Lorem Ipsum</div>
-            <button class="flex gap-2 px-3 py-1 items-center
-                      bg-[#21262C] hover:bg-[#30363C] border border-1 border-gray-700 hover:border-gray-400 rounded-lg
-                      transition-colors duration-300">
-              <img src="https://img.icons8.com/windows/32/e3e7ed/like--v1.png" class="w-5 h-5" alt="">
-              <div class="text-gray-400 font-semibold">Sponsor</div>
-            </button>
-          </a>
-          <a href="#" class="flex flex-col items-center p-4 border border-1 border-gray-700 rounded-lg bg-[#161B22]">
-            <img src="https://storage.googleapis.com/pai-images/80997b3889c34d019a18ebab1bde3956.jpeg"
-              class="w-24 h-24 rounded-full" alt="">
-            <div class="my-2 text-gray-400">Lorem Ipsum</div>
-            <button class="flex gap-2 px-3 py-1 items-center
-                      bg-[#21262C] hover:bg-[#30363C] border border-1 border-gray-700 hover:border-gray-400 rounded-lg
-                      transition-colors duration-300">
-              <img src="https://img.icons8.com/windows/32/e3e7ed/like--v1.png" class="w-5 h-5" alt="">
-              <div class="text-gray-400 font-semibold">Sponsor</div>
-            </button>
-          </a>
-          <a href="#" class="flex flex-col items-center p-4 border border-1 border-gray-700 rounded-lg bg-[#161B22]">
-            <img src="https://storage.googleapis.com/pai-images/80997b3889c34d019a18ebab1bde3956.jpeg"
-              class="w-24 h-24 rounded-full" alt="">
-            <div class="my-2 text-gray-400">Lorem Ipsum</div>
-            <button class="flex gap-2 px-3 py-1 items-center
-                      bg-[#21262C] hover:bg-[#30363C] border border-1 border-gray-700 hover:border-gray-400 rounded-lg
-                      transition-colors duration-300">
-              <img src="https://img.icons8.com/windows/32/e3e7ed/like--v1.png" class="w-5 h-5" alt="">
-              <div class="text-gray-400 font-semibold">Sponsor</div>
-            </button>
-          </a>
-          <a href="#" class="flex flex-col items-center p-4 border border-1 border-gray-700 rounded-lg bg-[#161B22]">
-            <img src="https://storage.googleapis.com/pai-images/80997b3889c34d019a18ebab1bde3956.jpeg"
-              class="w-24 h-24 rounded-full" alt="">
-            <div class="my-2 text-gray-400">Lorem Ipsum</div>
-            <button class="flex gap-2 px-3 py-1 items-center
-                      bg-[#21262C] hover:bg-[#30363C] border border-1 border-gray-700 hover:border-gray-400 rounded-lg
-                      transition-colors duration-300">
-              <img src="https://img.icons8.com/windows/32/e3e7ed/like--v1.png" class="w-5 h-5" alt="">
-              <div class="text-gray-400 font-semibold">Sponsor</div>
-            </button>
-          </a>
-          <a href="#" class="flex flex-col items-center p-4 border border-1 border-gray-700 rounded-lg bg-[#161B22]">
-            <img src="https://storage.googleapis.com/pai-images/80997b3889c34d019a18ebab1bde3956.jpeg"
-              class="w-24 h-24 rounded-full" alt="">
-            <div class="my-2 text-gray-400">Lorem Ipsum</div>
-            <button class="flex gap-2 px-3 py-1 items-center
-                      bg-[#21262C] hover:bg-[#30363C] border border-1 border-gray-700 hover:border-gray-400 rounded-lg
-                      transition-colors duration-300">
-              <img src="https://img.icons8.com/windows/32/e3e7ed/like--v1.png" class="w-5 h-5" alt="">
-              <div class="text-gray-400 font-semibold">Sponsor</div>
-            </button>
-          </a>
-
-        </div>
+    <div class={{CardGridContainer}}>
+      <div class={{CardGridStyle}}>
+        <app-grid-card></app-grid-card>
+        <app-grid-card></app-grid-card>
+        <app-grid-card></app-grid-card>
+        <app-grid-card></app-grid-card>
+        <app-grid-card></app-grid-card>
+        <app-grid-card></app-grid-card>
+        <app-grid-card></app-grid-card>
+        <app-grid-card></app-grid-card>
+        <app-grid-card></app-grid-card>
       </div>
     </div>
 
