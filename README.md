@@ -1,27 +1,87 @@
 # GithubLikeCard
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.1.
+## Table of Contents
+1. [Introduction](#introduction)
+2. [Requirements](#requirements)
+3. [Installation](#installation)
+4. [Development](#development)
+5. [Software Design Decisions](#software-design-decisions)
+6. [License](#license)
 
-## Development server
+## Introduction
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+This project is developed to demonstrate a **responsive** design of a real world example using:
+- Angular v17.3.1
+- TailwindCSS
+- Firebase ( Authentication & Deployment )
 
-## Code scaffolding
+## Requirements
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- [Node.js](https://nodejs.org/en/download/current) to install dependencies
+- [Angular CLI](https://angular.io/cli) to **run** | **test** | **build** the application
+- [Firebase CLI](https://firebase.google.com/docs/cli#mac-linux-npm) to configure authentication and deployment
 
-## Build
+## Installation
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+```bash
+# clone the repository
+$ git clone https://github.com/cakirburak/Github-like-Card.git
 
-## Running unit tests
+# install dependencies
+$ cd github-like-card && npm install
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Development
+```bash
+# run the application on local environment `http://localhost:4200/`
+$ ng serve
+```
 
-## Running end-to-end tests
+## Deployment
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- You need to login to your Firebase account with CLI before deployment
 
-## Further help
+```bash
+# login to firebase account
+$ firebase login
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- After executing the command below you should link it to your firebase project with following deployment configuration options
+
+```bash
+# deploy the application to Firebase hosting using Firebase CLI tool
+$ ng deploy
+```
+
+## Software Design Decisions
+
+### Authentication
+
+- A service layer implemented for managing authentication operations
+- It features signin and signup functionalities to desired components
+
+### UI and Responsive Layouts
+
+- TailwindCSS is used for styling the UI
+- To achieve implementing responsive design: [Breakpoints](https://tailwindcss.com/docs/responsive-design) are used,
+
+  #### Examples
+  1. 
+  ```js
+  <div class="flex flex-col md:flex-row">...</div>
+  // it switches flex direction according to device viewport
+  // in this case; apply col for viewport smaller than md, row for lager than md
+  ```
+  2.
+  ```js
+  <div class="text-base sm:text-lg md:text-xl lg:text-2xl">...</div>
+  // it switches text size according to device viewport
+  // in this case applies; base for viewport smaller than sm,
+  //                       lg for viewport larger than sm and smaller than md,
+  //                       xl for viewport larger than md and smaller than lg,
+  //                       2xl for viewport larger than lg
+  ```
+
+## License
+
+📄 This project is licensed under the [MIT License](LICENSE).
